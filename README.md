@@ -11,13 +11,13 @@ o	Filtrar canciones del mismo genero filtrer -
 o	Filtrar canciones en el mismo año
 •	Se debe crear comportamientos en donde se permita ordenar duración y fecha. 
 
-##DIRECTRICES DE ENTREGA:
+## DIRECTRICES DE ENTREGA:
 1.	Se debe hacer la entrega en un repositorio de control de versión como github.
 2.	El proyecto debe ser colaborativo, por ende se debe tener commits de los dos participante de forma equitativa 
 3.	El proyecto debe tener las buenas prácticas de programación mencionadas
 4.	Debes usar principios de programación orientada a objectos
 
-## By.
-## Adryan Ynfante,
-## Diego Becerra,
-## Miller Gallego.
+### By.
+### Adryan Ynfante,
+### Diego Becerra,
+### Miller Gallego.
