@@ -9,7 +9,7 @@ package appmusic;
  *
  * @author adrya
  */
-public class Song {
+public class Song implements Comparable<Song> {
 
     private int id;
     private String title;
@@ -94,5 +94,22 @@ public class Song {
     public String toString() {
         return this.id + "." + this.title + " --- " + this.gender + " --- " + this.duration + " --- " + this.date + " --- " + this.cover + " --- " + this.description;
     }
+
+    @Override
+    public int compareTo(Song o1) {
+        return this.date.compareToIgnoreCase(o1.date);
+    }
+    
+    public int compareToDuration(Song o1) {
+        if (this.duration < o1.getDuration()) {
+            return -1;
+        } else if (this.duration > o1.getDuration()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    
+
 
 }

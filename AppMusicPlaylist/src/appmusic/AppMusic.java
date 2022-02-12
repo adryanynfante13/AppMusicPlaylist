@@ -39,7 +39,7 @@ public class AppMusic {
         ListM.add(sg3);
         Song sg4 = new Song(4, "All Dead,All Dead", " Is a Queen song written by Brian May", 3.04, "Rock", "  √v^√v^√♥   ", "1977");
         ListM.add(sg4);
-        Song sg5 = new Song(5, "Coming Soon      ", "Is a song written by drummer of the English rock band Queen", 3.02, "Rock", " (̲̅:̲̅:̲̅:̲̅:̲̅:̲̅:̲̅ ) ", "1980");
+        Song sg5 = new Song(5, "Coming Soon      ", "Is a song written by drummer of the English rock band Queen", 3.02, "Rock", " (̲̅:̲̅:̲̅:̲̅:̲̅:̲̅:̲̅ ) ", "1960");
         ListM.add(sg5);
 
         System.out.println("*******Our Songs*******");
@@ -115,7 +115,7 @@ public class AppMusic {
                 }
                 break;
             case 3:
-               System.out.println("===================================");
+                System.out.println("===================================");
                 System.out.println("");
                 System.out.println("Por favor ingrese la forma en que deseas ordenar la Lista");
                 System.out.println("");
@@ -123,13 +123,16 @@ public class AppMusic {
                 System.out.println("    2. Duration.");
                 int op3 = num.nextInt();
                 if (op3 == 1) {
-                    
                     Collections.sort(ListM, (x, y) -> x.getDate().compareToIgnoreCase(y.getDate()));
+                    for (Song s : ListM) {
+                            System.out.println(s.toString());
+                    }
 
                 } else if (op3 == 2) {
-                    System.out.println("Por favor ingrese el año que desea filtrar");
-                    dat = anio.nextLine();
-                    meth.FilterSongD(dat, ListM);
+                    Collections.sort(ListM, (x, y) -> x.getDate().compareToIgnoreCase(y.getDate()));
+                    for (Song s : ListM) {
+                            System.out.println(s.toString());
+                    }
                 }
                 break;
         }
