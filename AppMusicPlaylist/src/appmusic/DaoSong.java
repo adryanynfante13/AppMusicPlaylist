@@ -6,35 +6,32 @@
 package appmusic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
  *
  * @author adryan creacion de filtros
  */
-
 public class DaoSong {
-    
-    private String gender;
-    private int date = 0; 
-     
-     public void FilterSongG(String gender, ArrayList<Song> ListM){
-        
-       ListM.stream().filter(s -> s.getGender()==gender).forEach(System.out::println);
-       
-    
-    
-     }
-         public void FilterSongD(String date, ArrayList<Song> ListM){
-        
-       ListM.stream().filter(s -> s.getDate()==date).forEach(System.out::println);
-       
-    
-    
-     }
 
-    void FilterSongD(int dat, ArrayList<Song> ListM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private String gender;
+    private int date = 0;
+
+    public void FilterSongG(String gender, ArrayList<Song> ListM) {
+
+        ListM.stream().filter(s -> s.getGender() == gender).forEach(System.out::println);
+
     }
-  
+
+    public void FilterSongD(String date, ArrayList<Song> ListM) {
+
+        ListM.stream().filter(s -> s.getDate().equals(date)).forEach(System.out::println);
+
+    }
+    
+    public void OrderbyDate(ArrayList<Song> ListM){
+        Collections.sort(ListM, (x, y) -> x.getDate().compareToIgnoreCase(y.getDate()));
+    }
+
 }

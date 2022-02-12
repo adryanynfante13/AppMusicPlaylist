@@ -6,6 +6,7 @@
 package appmusic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -22,12 +23,14 @@ public class AppMusic {
         ArrayList<Song> ListM = new ArrayList<>();
         ArrayList<Song> PlayL = new ArrayList<>();
         Scanner num = new Scanner(System.in);
+        Scanner anio = new Scanner(System.in);
         DaoSong meth = new DaoSong();
-        
-         System.out.println("**************************************************");
-        System.out.println("   Bienvenid@ a DAM -Music for you-");
+        String dat = "";
+
         System.out.println("**************************************************");
-        
+        System.out.println("   Welcome to DAM -Music for you-");
+        System.out.println("**************************************************");
+
         Song sg1 = new Song(1, "Bohemian Rhapsody", " Is a song and single by the British rock band Queen.", 5.55, "Rock", "   ─═☆☆═─   ", "1975");
         ListM.add(sg1);
         Song sg2 = new Song(2, "Candle in The Wind", " Is a song with music by Elton John and lyrics by Bernie Taupin.", 3.57, "Pop", " ((̲̅●̲̲̅=̲̲̅●̲̅))", "1997");
@@ -44,7 +47,6 @@ public class AppMusic {
         for (Song sg : ListM) {
             System.out.println(sg.toString());
         }
-       
 
         System.out.println("");
         System.out.println("Por favor ingrese el núemero de la opcion deseada ");
@@ -60,8 +62,8 @@ public class AppMusic {
             System.out.println("No disponible, vuelva a intentar");
             System.out.println("--------------------------------");
         }
-
         switch (op) {
+
             case 1:
                 System.out.println("===================================");
                 System.out.println("********Create Playlist********");
@@ -78,7 +80,7 @@ public class AppMusic {
                     }
                 } while (opplay != 0);
                 System.out.println("********Tu Playlist********");
-                System.out.println("|        Title        | |   Gender   |   Duration   |   Date    |    Cover    |        Description       |");
+                System.out.println("|      Title     | |  Gender | Duration | Date  |       Cover       |         Description         |");
                 for (Song sg : PlayL) {
                     System.out.println(sg.toString());
                 }
@@ -91,7 +93,6 @@ public class AppMusic {
                 System.out.println("    1. Gender.");
                 System.out.println("    2. Date.");
                 int op2 = num.nextInt();
-                int dat = num.nextInt();
                 if (op2 == 1) {
 
                     System.out.println("Por favor ingrese el número del genero que desea filtrar");
@@ -109,11 +110,28 @@ public class AppMusic {
 
                 } else if (op2 == 2) {
                     System.out.println("Por favor ingrese el año que desea filtrar");
-                    if(dat==dat)
+                    dat = anio.nextLine();
+                    meth.FilterSongD(dat, ListM);
+                }
+                break;
+            case 3:
+               System.out.println("===================================");
+                System.out.println("");
+                System.out.println("Por favor ingrese la forma en que deseas ordenar la Lista");
+                System.out.println("");
+                System.out.println("    1. Date.");
+                System.out.println("    2. Duration.");
+                int op3 = num.nextInt();
+                if (op3 == 1) {
+                    
+                    Collections.sort(ListM, (x, y) -> x.getDate().compareToIgnoreCase(y.getDate()));
+
+                } else if (op3 == 2) {
+                    System.out.println("Por favor ingrese el año que desea filtrar");
+                    dat = anio.nextLine();
                     meth.FilterSongD(dat, ListM);
                 }
                 break;
         }
     }
 }
-
