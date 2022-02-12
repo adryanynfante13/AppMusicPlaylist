@@ -125,13 +125,13 @@ public class AppMusic {
                 if (op3 == 1) {
                     Collections.sort(ListM, (x, y) -> x.getDate().compareToIgnoreCase(y.getDate()));
                     for (Song s : ListM) {
-                            System.out.println(s.toString());
+                        System.out.println(s.toString());
                     }
                     break;
                 } else if (op3 == 2) {
                     Collections.sort(ListM, (Song x, Song y) -> x.getDuration().compareToIgnoreCase(y.getDuration()));
                     for (Song s : ListM) {
-                            System.out.println(s.toString());
+                        System.out.println(s.toString());
                     }
                 }
                 break;

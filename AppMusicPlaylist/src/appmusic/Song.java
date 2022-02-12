@@ -99,12 +99,10 @@ public class Song implements Comparable<Song> {
     public int compareTo(Song o1) {
         return this.date.compareToIgnoreCase(o1.date);
     }
-    
+
     public int compareToDuration(Song o1) {
-        
+
         return this.duration.compareToIgnoreCase(o1.duration);
     }
-    
-
 
 }

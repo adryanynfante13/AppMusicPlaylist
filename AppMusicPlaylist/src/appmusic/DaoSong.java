@@ -29,17 +29,13 @@ public class DaoSong {
         ListM.stream().filter(s -> s.getDate().equals(date)).forEach(System.out::println);
 
     }
-    
-    public void OrderbyDate(ArrayList<Song> ListM){
+
+    public void OrderbyDate(ArrayList<Song> ListM) {
         Collections.sort(ListM, (x, y) -> x.getDate().compareToIgnoreCase(y.getDate()));
     }
-    
-     public void OrderbyDuration(ArrayList<Song> ListM){
+
+    public void OrderbyDuration(ArrayList<Song> ListM) {
         Collections.sort(ListM, (x, y) -> x.getDuration().compareToIgnoreCase(y.getDuration()));
     }
-    
-    
-
-
 
 }
