@@ -31,15 +31,15 @@ public class AppMusic {
         System.out.println("   Welcome to DAM -Music for you-");
         System.out.println("**************************************************");
 
-        Song sg1 = new Song(1, "Bohemian Rhapsody", " Is a song and single by the British rock band Queen.", 5.55, "Rock", "   ─═☆☆═─   ", "1975");
+        Song sg1 = new Song(1, "Bohemian Rhapsody", " Is a song and single by the British rock band Queen.", "5.55", "Rock", "   ─═☆☆═─   ", "1975");
         ListM.add(sg1);
-        Song sg2 = new Song(2, "Candle in The Wind", " Is a song with music by Elton John and lyrics by Bernie Taupin.", 3.57, "Pop", " ((̲̅●̲̲̅=̲̲̅●̲̅))", "1997");
+        Song sg2 = new Song(2, "Candle in The Wind", " Is a song with music by Elton John and lyrics by Bernie Taupin.", "3.57", "Pop", " ((̲̅●̲̲̅=̲̲̅●̲̅))", "1997");
         ListM.add(sg2);
-        Song sg3 = new Song(3, "Games             ", " It's a heartbreak song ", 3.01, "Pop", "  ¯(°_o)/¯  ", "2017");
+        Song sg3 = new Song(3, "Games             ", " It's a heartbreak song ", "3.01", "Pop", "  ¯(°_o)/¯  ", "2017");
         ListM.add(sg3);
-        Song sg4 = new Song(4, "All Dead,All Dead", " Is a Queen song written by Brian May", 3.04, "Rock", "  √v^√v^√♥   ", "1977");
+        Song sg4 = new Song(4, "All Dead,All Dead", " Is a Queen song written by Brian May", "3.04", "Rock", "  √v^√v^√♥   ", "1977");
         ListM.add(sg4);
-        Song sg5 = new Song(5, "Coming Soon      ", "Is a song written by drummer of the English rock band Queen", 3.02, "Rock", " (̲̅:̲̅:̲̅:̲̅:̲̅:̲̅:̲̅ ) ", "1960");
+        Song sg5 = new Song(5, "Coming Soon      ", "Is a song written by drummer of the English rock band Queen", "3.02", "Rock", " (̲̅:̲̅:̲̅:̲̅:̲̅:̲̅:̲̅ ) ", "1980");
         ListM.add(sg5);
 
         System.out.println("*******Our Songs*******");
@@ -127,9 +127,9 @@ public class AppMusic {
                     for (Song s : ListM) {
                             System.out.println(s.toString());
                     }
-
+                    break;
                 } else if (op3 == 2) {
-                    Collections.sort(ListM, (x, y) -> x.getDate().compareToIgnoreCase(y.getDate()));
+                    Collections.sort(ListM, (Song x, Song y) -> x.getDuration().compareToIgnoreCase(y.getDuration()));
                     for (Song s : ListM) {
                             System.out.println(s.toString());
                     }

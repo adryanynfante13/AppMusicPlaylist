@@ -14,12 +14,12 @@ public class Song implements Comparable<Song> {
     private int id;
     private String title;
     private String description;
-    private double duration;
+    private String duration;
     private String gender;
     private String cover;
     private String date;
 
-    public Song(int id, String title, String description, double duration, String gender, String cover, String date) {
+    public Song(int id, String title, String description, String duration, String gender, String cover, String date) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -58,11 +58,11 @@ public class Song implements Comparable<Song> {
         this.description = description;
     }
 
-    public double getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(double duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 
@@ -101,13 +101,8 @@ public class Song implements Comparable<Song> {
     }
     
     public int compareToDuration(Song o1) {
-        if (this.duration < o1.getDuration()) {
-            return -1;
-        } else if (this.duration > o1.getDuration()) {
-            return 1;
-        } else {
-            return 0;
-        }
+        
+        return this.duration.compareToIgnoreCase(o1.duration);
     }
     
 

@@ -33,5 +33,13 @@ public class DaoSong {
     public void OrderbyDate(ArrayList<Song> ListM){
         Collections.sort(ListM, (x, y) -> x.getDate().compareToIgnoreCase(y.getDate()));
     }
+    
+     public void OrderbyDuration(ArrayList<Song> ListM){
+        Collections.sort(ListM, (x, y) -> x.getDuration().compareToIgnoreCase(y.getDuration()));
+    }
+    
+    
+
+
 
 }
