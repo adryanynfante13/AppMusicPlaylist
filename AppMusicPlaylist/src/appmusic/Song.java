@@ -9,18 +9,18 @@ package appmusic;
  *
  * @author adrya
  */
-
 public class Song {
+
     private int id;
     private String title;
-    private String description; 
+    private String description;
     private double duration;
     private String gender;
     private String cover;
     private String date;
-   
-    
+
     public Song(int id, String title, String description, double duration, String gender, String cover, String date) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.duration = duration;
@@ -29,7 +29,8 @@ public class Song {
         this.duration = duration;
         this.date = date;
     }
-    public Song(){
+
+    public Song() {
 
     }
 
@@ -89,6 +90,9 @@ public class Song {
         this.date = date;
     }
 
-    
-}
+    @Override
+    public String toString() {
+        return this.id + "." + this.title + " --- " + this.gender + " --- " + this.duration + " --- " + this.date + " --- " + this.cover + " --- " + this.description;
+    }
 
+}

@@ -9,6 +9,7 @@ package appmusic;
  *
  * @author adrya
  */
-public class main {
+public class DaoSong {
+    
     
 }
