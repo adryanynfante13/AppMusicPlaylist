@@ -26,23 +26,25 @@ public class AppMusic {
         Scanner anio = new Scanner(System.in);
         DaoSong meth = new DaoSong();
         String dat = "";
-
+         /**
+        * @author Diego  y Adryan--> se realiza carga de informacion de array de canciones y bienvenida al sistema 
+        */
         System.out.println("**************************************************");
         System.out.println("   Welcome to DAM -Music for you-");
         System.out.println("**************************************************");
-        Song sg1 = new Song(1, "Bohemian Rhapsody", " Is a song and single by the British rock band Queen.", "5.55", "Rock", "   ─═☆☆═─   ", "1975");
+        Song sg1 = new Song(1, "Bohemian Rhapsody", " Is a song and single by the British rock band Queen.", "5.55", "Rock", "   ─═☆☆═─  ", "1975");
         ListM.add(sg1);
-        Song sg2 = new Song(2, "Candle in The Wind", " Is a song with music by Elton John and lyrics by Bernie Taupin.", "3.57", "Pop", " ((̲̅●̲̲̅=̲̲̅●̲̅))", "1997");
+        Song sg2 = new Song(2, "Candle in The Wind", " Is a song with music by Elton John and lyrics by Bernie Taupin.", "3.57", "Pop", " ((̲̅●̲̲̅=̲̲̅●̲̅)) ", "1997");
         ListM.add(sg2);
-        Song sg3 = new Song(3, "Games             ", " It's a heartbreak song ", "3.01", "Pop", "  ¯(°_o)/¯  ", "2017");
+        Song sg3 = new Song(3, "Games             ", " It's a heartbreak song ", "3.01", "Pop", "  ¯(°_o)/¯    ", "2017");
         ListM.add(sg3);
-        Song sg4 = new Song(4, "All Dead,All Dead", " Is a Queen song written by Brian May", "3.04", "Rock", "  √v^√v^√♥   ", "1977");
+        Song sg4 = new Song(4, "All Dead,All Dead", " Is a Queen song written by Brian May", "3.04", "Rock", "  √v^√v^√♥  ", "1977");
         ListM.add(sg4);
-        Song sg5 = new Song(5, "Coming Soon      ", "Is a song written by drummer of the English rock band Queen", "3.02", "Rock", " (̲̅:̲̅:̲̅:̲̅:̲̅:̲̅:̲̅ ) ", "1980");
+        Song sg5 = new Song(5, "Coming Soon      ", " Is a song written by drummer of the English rock band Queen", "3.02", "Rock", " (̲̅:̲̅:̲̅:̲̅:̲̅:̲̅)", "1980");
         ListM.add(sg5);
 
         System.out.println("*******Our Songs*******");
-        System.out.println("|      Title     | |  Gender | Duration | Date  |       Cover       |         Description         |");
+        System.out.println("|      Title     | |  Gender | Duration | Date  |       Cover       |                          Description                          |");
         for (Song sg : ListM) {
             System.out.println(sg.toString());
         }
@@ -56,10 +58,13 @@ public class AppMusic {
             System.out.println("0. Salir de DAM. ");
             System.out.println("");
             op = num.nextInt();
-            switch (op) {
+             /**
+            * @author Diego  y Adryan--> se inician opciones del sistema
+            */
+                switch (op) {
                 case 1:
                     System.out.println("===================================");
-                    System.out.println("|      Title     | |  Gender | Duration | Date  |       Cover       |         Description         |");
+                    System.out.println("|      Title     | |  Gender | Duration | Date  |       Cover       |                          Description                          |");
                     for (Song sg : ListM) {
                         System.out.println(sg.toString());
                     }
@@ -78,7 +83,7 @@ public class AppMusic {
                         }
                     } while (opplay != 0);
                     System.out.println("********Tu Playlist********");
-                    System.out.println("|      Title     | |  Gender | Duration | Date  |       Cover       |         Description         |");
+                    System.out.println("|      Title     | |  Gender | Duration | Date  |       Cover       |                            Description                            |");
                     for (Song sg : PlayL) {
                         System.out.println(sg.toString());
                     }
@@ -86,14 +91,14 @@ public class AppMusic {
                 case 2:
                     System.out.println("===================================");
                     System.out.println("");
-                    System.out.println("Por favor ingrese el número del genero que desea filtrar");
+                    System.out.println("Please enter the number of the genre you want to filter");
                     System.out.println("");
                     System.out.println("    1. Gender.");
                     System.out.println("    2. Date.");
                     int op2 = num.nextInt();
                     if (op2 == 1) {
 
-                        System.out.println("Por favor ingrese el número del genero que desea filtrar");
+                        System.out.println("Please enter the number of the genre you want to filter");
                         System.out.println("");
                         System.out.println("1.Rock.");
                         System.out.println("2.Pop.");
@@ -107,7 +112,7 @@ public class AppMusic {
                         }
 
                     } else if (op2 == 2) {
-                        System.out.println("Por favor ingrese el año que desea filtrar");
+                        System.out.println("Please enter the year you want to filter");
                         dat = anio.nextLine();
                         meth.FilterSongD(dat, ListM);
                     }
@@ -115,7 +120,7 @@ public class AppMusic {
                 case 3:
                     System.out.println("===================================");
                     System.out.println("");
-                    System.out.println("Por favor ingrese la forma en que deseas ordenar la Lista");
+                    System.out.println("Please enter the way you want to sort the List");
                     System.out.println("");
                     System.out.println("    1. Date.");
                     System.out.println("    2. Duration.");
@@ -136,8 +141,8 @@ public class AppMusic {
                 case 0:
                     break;
                 default:
-                    System.out.println("Opcion invalida.");
+                    System.out.println("Invalid option.");
             }
-        } while (op != 0);
+        } while (op != 0); //ciclo de opciones del sistema
     }
 }

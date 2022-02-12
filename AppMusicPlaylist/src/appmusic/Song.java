@@ -10,7 +10,9 @@ package appmusic;
  * @author adrya
  */
 public class Song implements Comparable<Song> {
-
+   /**
+     * @author adryan -->  se declaran variables,
+     */
     private int id;
     private String title;
     private String description;
@@ -33,7 +35,9 @@ public class Song implements Comparable<Song> {
     public Song() {
 
     }
-
+     /**
+     * @author adryan -->  se realizan todas las funciones para obtener y setear valor a las variables de la clase Songs
+     */
     public int getId() {
         return id;
     }
@@ -90,18 +94,22 @@ public class Song implements Comparable<Song> {
         this.date = date;
     }
 
+    
     @Override
     public String toString() {
         return this.id + "." + this.title + " --- " + this.gender + " --- " + this.duration + " --- " + this.date + " --- " + this.cover + " --- " + this.description;
     }
 
+     /**
+     * @author Diego --> se realiza comparacion de string para ordenar por fecha y duration.  
+     */
+    
     @Override
     public int compareTo(Song o1) {
         return this.date.compareToIgnoreCase(o1.date);
     }
 
     public int compareToDuration(Song o1) {
-
         return this.duration.compareToIgnoreCase(o1.duration);
     }
 
