@@ -1,19 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package appmusic;
 
 /**
- *
- * @author adrya
- */
+* The functionality of this class is to create an object which will be used as a template to store different types of songs, 
+*   as well as to obtain or modify the information of these objects.
+*
+* @version 1.01.1 2022-02-12 
+*           
+* @author Adryan Ynfante Valero - adryanynfante@gmail.com
+*
+* @since Available from version 1
+* 
+*/
+
 public class Song implements Comparable<Song> {
-   /**
-     * @author adryan -->  se declaran variables,
-     */
-    private int id;
+   
+    /* Variable declaration.*/
+     
+    private String id;
     private String title;
     private String description;
     private String duration;
@@ -21,7 +24,7 @@ public class Song implements Comparable<Song> {
     private String cover;
     private String date;
 
-    public Song(int id, String title, String description, String duration, String gender, String cover, String date) {
+    public Song(String id, String title, String description, String duration, String gender, String cover, String date) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -35,14 +38,14 @@ public class Song implements Comparable<Song> {
     public Song() {
 
     }
-     /**
-     * @author adryan -->  se realizan todas las funciones para obtener y setear valor a las variables de la clase Songs
-     */
-    public int getId() {
+    
+    /*All the functions to obtain and set values for the variables of the Songs class are performed.*/
+     
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -97,18 +100,37 @@ public class Song implements Comparable<Song> {
     
     @Override
     public String toString() {
-        return this.id + "." + this.title + " --- " + this.gender + " --- " + this.duration + " --- " + this.date + " --- " + this.cover + " --- " + this.description;
+        return this.id + "." + this.title + " --- " + this.gender + " --- "
+            + this.duration + " --- " + this.date + " --- " + this.cover + 
+            " --- " + this.description;
     }
 
-     /**
-     * @author Diego --> se realiza comparacion de string para ordenar por fecha y duration.  
-     */
+    /**
+    * Method with which string comparison is performed in order to generate a sorting by date.
+    *
+    * @param o1 object of type Song 
+    * @return Boolean value
+    *
+    * @author Diego Fernando Becerra Zambrano - diegofer1110@gmail.com 
+    *
+    * @since It is present since version 1
+    */
     
     @Override
     public int compareTo(Song o1) {
         return this.date.compareToIgnoreCase(o1.date);
     }
-
+    
+    /**
+    * Method with which string comparison is performed to generate a sorting by duration.
+    *
+    * @param o1 object of type Song 
+    * @return Boolean value
+    *
+    * @author Diego Fernando Becerra Zambrano - diegofer1110@gmail.com 
+    *
+    * @since It is present since version 1
+    */
     public int compareToDuration(Song o1) {
         return this.duration.compareToIgnoreCase(o1.duration);
     }
