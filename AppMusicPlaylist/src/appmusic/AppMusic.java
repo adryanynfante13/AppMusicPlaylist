@@ -56,13 +56,13 @@ public class AppMusic {
         /* Start of the cycle with which a console menu is generated for the program to perform its functions. */
         do {
             System.out.println("");
-            System.out.println("Por favor ingrese el núemero de la opcion deseada ");
-            System.out.println("1. Crear playlist de canciones");
-            System.out.println("2. Filtrar por:  ");
-            System.out.println("3. Ordenar por: ");
-            System.out.println("4. Modificar Playlist: ");
-            System.out.println("5. Mostrar Playlist: ");
-            System.out.println("0. Salir de DAM. ");
+            System.out.println("Please enter the number of the desired option ");
+            System.out.println("1. Create playlist of songs");
+            System.out.println("2. Filter by:  ");
+            System.out.println("3. Sort by: ");
+            System.out.println("4. Modify Playlist: ");
+            System.out.println("5. Show Playlist: ");
+            System.out.println("0. Exit DAM. ");
             System.out.println("");
             op = num.nextInt();
 
@@ -152,9 +152,9 @@ public class AppMusic {
                     }
                     break;
                 case 4:
-                    System.out.println("Porfavor ingrese una de las opciones");
-                    System.out.println("1. eliminar todas las canciones de la Playlist");
-                    System.out.println("2. eliminar una cancion especifica de la Playlist");
+                    System.out.println("Please enter one of the following options");
+                    System.out.println("1. delete all songs from the Playlist");
+                    System.out.println("2. delete a specific song from the Playlist");
                     int op4 = num.nextInt();
                     if (op4 == 1) {
                         meth.ModifyPlayList(op4, PlayL, op4);
