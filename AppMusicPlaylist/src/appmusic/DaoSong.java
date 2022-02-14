@@ -97,7 +97,7 @@ public class DaoSong {
      * functions
      * @param song Data type integer position of the object to be deleted
      *
-     * @author Diego Fernando Becerra Zambrano - diegofer1110@gmail.com
+     * @author Miller Esteban Gallego Forero - miller.gallegof@gmail.com
      *
      * @since It is present since version 1
      */
